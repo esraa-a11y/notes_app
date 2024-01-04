@@ -6,8 +6,16 @@ class AddNoteBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
+      
       ],
     );
+  }
+}
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
