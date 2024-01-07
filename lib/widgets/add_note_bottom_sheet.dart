@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
+import 'package:notes_app/widgets/custom_button.dart';
 import 'custom_text_field.dart';
 class AddNoteBottomSheet extends StatelessWidget {
   const AddNoteBottomSheet({Key? key}) : super(key: key);
@@ -28,26 +29,6 @@ class AddNoteBottomSheet extends StatelessWidget {
           ),
         ),
 
-    );
-  }
-}
-class CustomButton extends StatelessWidget {
-  const CustomButton({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: kPrimaryColor,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      width: MediaQuery.of(context).size.width,
-      height: 55,
-      child: Center(child: Text('Save',style: TextStyle(
-        color: Colors.black,
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-      ),)),
     );
   }
 }
