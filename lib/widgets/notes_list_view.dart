@@ -14,13 +14,13 @@ class NotesListView extends StatelessWidget {
         List<NoteModel> notes=BlocProvider.of<NotesCubit>(context).notes??[];
 
         return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16.0),
+          padding:  EdgeInsets.symmetric(vertical: 16.0),
           child: ListView.builder(
             itemCount: notes.length,
               itemBuilder: (context,index){
             return Padding(padding:
             EdgeInsets.symmetric(vertical: 8),
-              child:const NoteItem() ,);
+              child: NoteItem(note: notes[index],) ,);
 
 
           }),
