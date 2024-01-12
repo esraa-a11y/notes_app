@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_app/constants.dart';
 import 'package:notes_app/cubits/add_note_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/widgets/add_note_form.dart';
+import 'package:notes_app/widgets/color_list_view.dart';
 import 'package:notes_app/widgets/custom_app_bar.dart';
 import 'package:notes_app/widgets/custom_text_field.dart';
+import 'package:notes_app/widgets/edit_note_colors_list.dart';
+
+import '../cubits/add_note_cubit/add_note_cubit.dart';
 class EditNoteViewBody extends StatefulWidget {
   const EditNoteViewBody({Key? key, required this.note}) : super(key: key);
  final NoteModel note;
@@ -45,6 +50,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             onChanged: (value){ content=value;},
 
             hint: widget.note.subTitle,maxLines: 5,),
+          EditNoteColorsList(note:widget.note),
 
         ],
       ),
